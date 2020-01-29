@@ -54,33 +54,33 @@ function openCity(evt, cityName, color) {
 
 function switchBlue() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "blue";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "blue";
 }
 
 function switchRed() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "red";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "red";
 }
 
 function switchGray() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "gray";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "gray";
 }
 function switchYellow() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "yellow";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "yellow";
 }
 function switchBlack() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "black";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "black";
 }
 function switchPink() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "lightsalmon";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "lightsalmon";
 }
 function switchGreen() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "green";
-  // document.getElementsByTagName("body")[0].style.color = "white";
+   document.getElementsByTagName("body")[0].style.color = "green";
 }
 
 // const gallery = document.querySelector('.gallery');
@@ -94,7 +94,7 @@ const gallery = document.querySelector(".game-gallery");
 function generateHTML(data) {
   //console.log("inside generate " + data.ratings[0].count);
   const name  = data.name;
-  let rating = (data.rating)*2;
+  let rating = (((data.rating)*2)*10).toFixed(2);
 
 
   const background_image = data.background_image;
@@ -108,7 +108,7 @@ function generateHTML(data) {
             <h3 class="main-title mt1 fw2 f2 game-title">${name}</h3>
           </div>
           <div class="">
-            <h1 class="f3 br-pill ph3 pv2 ma3 dib white bg-dark-pink">${rating = rating === 0? "NA": rating}</h1>
+            <h1 class="score f3 br-pill ph3 pv2 ma3 dib white bg-dark-pink"> ${rating = rating === 0? "NA": rating +'%'}</h1>
             <p class="game-title tracked release">Release date: ${released}</p>
             <p class="game-title tracked esrg">ESRG rating ${"Yes"}</p>
           </div>

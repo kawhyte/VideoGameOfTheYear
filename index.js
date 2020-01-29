@@ -101,7 +101,7 @@ function generateHTML(data) {
   const released  = data.released
   return `
   <a href="https://geo.itunes.apple.com/us/movie/primer/id536457427?at=1l3vqFJ&ct=1l3vqFJ&mt=6"
-      class="fl w-50-ns w-25-l link overflow-hidden">
+      class="fl w-50 w-25-l link overflow-hidden">
       <div class="words ">
         <article class="">
           <div>
@@ -109,8 +109,8 @@ function generateHTML(data) {
           </div>
           <div class="">
             <h1 class="f3 br-pill ph3 pv2 ma3 dib white bg-dark-pink">${rating = rating === 0? "NA": rating}</h1>
-            <p class="game-title tracked">Release date: ${released}</p>
-            <p class="game-title tracked">ESRG rating ${"Yes"}</p>
+            <p class="game-title tracked release">Release date: ${released}</p>
+            <p class="game-title tracked esrg">ESRG rating ${"Yes"}</p>
           </div>
         </article>
       </div>

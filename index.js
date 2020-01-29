@@ -101,7 +101,7 @@ function generateHTML(data) {
   const released  = data.released
   return `
   <a href="https://geo.itunes.apple.com/us/movie/primer/id536457427?at=1l3vqFJ&ct=1l3vqFJ&mt=6"
-      class="fl w-50 w-25-l link overflow-hidden">
+      class="fl w-50-ns w-25-l link overflow-hidden">
       <div class="words ">
         <article class="">
           <div>

@@ -11,7 +11,7 @@ body {
   /* margin: 10 auto; */
   /* max-width: 56em; */
   /* padding: 1em 0; */
-  min-width: 500px;
+  min-width: 400px;
 
 }
 
@@ -271,7 +271,9 @@ h3 {
 
 
 @media only screen and (max-width: 1500px) {
-
+  body {
+    background-color:yellow;
+  }
   .game-title {
 
     color: white;
@@ -321,7 +323,9 @@ h3 {
 
 }
 @media only screen and (max-width: 790px) {
-
+  body {
+    background-color: pink;
+  }
 
   .game-title {
 

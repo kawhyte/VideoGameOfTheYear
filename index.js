@@ -92,7 +92,7 @@ const gallery = document.querySelector(".game-gallery");
 //     const overlayClose = overlay.querySelector('.close');
 //          // <img src="images/${randomNumber(12)}.jpg">
 function generateHTML(data) {
-  console.log("inside generate " + data.rating);
+  // console.log("inside generate " + data.rating);
   const name  = data.name;
   let rating = (data.rating)*2;
 
@@ -107,7 +107,7 @@ function generateHTML(data) {
 
         
         <h3 class="f3 f2-m  measure-narrow lh-title mv0">
-        <span class="bg-black-90 grow aspect-ratio--4x6 pa2 lh-copy white pa1 tracked-tight measure-narrow">
+        <span class="bg-black-90 grow aspect-ratio--4x6 pa2 lh-copy white tracked-tight measure-narrow">
         ${name}
         </span>
       </h3>
@@ -309,7 +309,7 @@ const options = {
 Promise.all(urls.map(url => fetch(url, options)))
   .then(resp => Promise.all(resp.map(r => r.json())))
   .then(data => {
-    console.log(data);
+    // console.log(data);
 
     let sorted = data.sort((a, b) => (b.rating) - (a.rating));
 

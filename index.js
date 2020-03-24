@@ -92,7 +92,7 @@ const gallery = document.querySelector(".game-gallery");
 //     const overlayClose = overlay.querySelector('.close');
 //          // <img src="images/${randomNumber(12)}.jpg">
 function generateHTML(data) {
-  //console.log("inside generate " + data.ratings[0].count);
+  console.log("inside generate " + data.rating);
   const name  = data.name;
   let rating = (data.rating)*2;
 
@@ -104,14 +104,17 @@ function generateHTML(data) {
       class="fl w-50 w-25-l link overflow-hidden">
       <div class="words ">
         <article class="">
-          <div>
-            <h3 class="main-title mt1 fw2 f2 game-title">${name}</h3>
-          </div>
-          <div class="">
-            <h1 class="score f3 br-pill ph3 pv2 ma3 dib white bg-dark-pink"> ${rating = rating === 0? "NA": ((rating)*10).toFixed(2) +'%'}</h1>
-            <p class="game-title tracked release">Release date: ${released}</p>
-            <p class="game-title tracked esrg">ESRG rating ${"Yes"}</p>
-          </div>
+
+        
+        <h3 class="f3 f2-m  measure-narrow lh-title mv0">
+        <span class="bg-black-90 grow aspect-ratio--4x6 pa2 lh-copy white pa1 tracked-tight measure-narrow">
+        ${name}
+        </span>
+      </h3>
+      <h5 class="f6  pa2 ttu tracked white-80">Release date: ${released}</h5>
+
+      <h1 class="score f3 br3 dib tc ph3 pv2 ma3 dib white bg-dark-green"> ${rating = rating === 0? "NA": ((rating)*10).toFixed(0)}</h1>
+
         </article>
       </div>
       <div role="img" aria-label="${name}" class="grow aspect-ratio--4x6 o-80"
@@ -308,8 +311,10 @@ Promise.all(urls.map(url => fetch(url, options)))
   .then(data => {
     console.log(data);
 
+    let sorted = data.sort((a, b) => (b.rating) - (a.rating));
+
     const html = data.map(generateHTML).join("");
-    console.log(html);
+    // console.log(html);
     gallery.innerHTML = html;
   });
 
